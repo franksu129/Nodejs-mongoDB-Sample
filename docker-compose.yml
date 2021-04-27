@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  mongo4:
+    container_name: mongo4
+    image: mongo:4.4.5
+    volumes:
+      - D:/Nodejs-mongoDB-test/data/mongo4/db:/data/db
+      - D:/Nodejs-mongoDB-test/data/mongo4/conf:/data/configdb
+    ports:
+      - "27017:27017"
