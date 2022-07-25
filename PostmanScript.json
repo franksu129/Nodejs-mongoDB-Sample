@@ -1,0 +1,175 @@
+{
+   "info":{
+      "_postman_id":"592e7c21-1e87-4980-a8af-21148ba21cb5",
+      "name":"MongoTest",
+      "schema":"https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+   },
+   "item":[
+      {
+         "name":"check Connected",
+         "request":{
+            "method":"GET",
+            "header":[
+               
+            ],
+            "url":{
+               "raw":"http://localhost:5000/api/mongo/check",
+               "protocol":"http",
+               "host":[
+                  "localhost"
+               ],
+               "port":"5000",
+               "path":[
+                  "api",
+                  "mongo",
+                  "check"
+               ]
+            }
+         },
+         "response":[
+            
+         ]
+      },
+      {
+         "name":"Insert",
+         "request":{
+            "method":"POST",
+            "header":[
+               
+            ],
+            "body":{
+               "mode":"raw",
+               "raw":"{\r\n    \"ID\": 10,\r\n    \"Name\": \"Adda\",\r\n    \"old\": 25,\r\n    \"Address\": \"abcdefghijk\"\r\n}",
+               "options":{
+                  "raw":{
+                     "language":"json"
+                  }
+               }
+            },
+            "url":{
+               "raw":"http://localhost:5000/api/mongo/echo",
+               "protocol":"http",
+               "host":[
+                  "localhost"
+               ],
+               "port":"5000",
+               "path":[
+                  "api",
+                  "mongo",
+                  "echo"
+               ]
+            }
+         },
+         "response":[
+            
+         ]
+      },
+      {
+         "name":"Get",
+         "protocolProfileBehavior":{
+            "disableBodyPruning":true
+         },
+         "request":{
+            "method":"GET",
+            "header":[
+               
+            ],
+            "body":{
+               "mode":"raw",
+               "raw":"",
+               "options":{
+                  "raw":{
+                     "language":"json"
+                  }
+               }
+            },
+            "url":{
+               "raw":"http://localhost:5000/api/mongo/echo",
+               "protocol":"http",
+               "host":[
+                  "localhost"
+               ],
+               "port":"5000",
+               "path":[
+                  "api",
+                  "mongo",
+                  "echo"
+               ]
+            }
+         },
+         "response":[
+            
+         ]
+      },
+      {
+         "name":"Update (需要帶入get的_ID當成參數)",
+         "request":{
+            "method":"PATCH",
+            "header":[
+               
+            ],
+            "body":{
+               "mode":"raw",
+               "raw":"{\r\n    \"Name\": \"FDSA\"\r\n}",
+               "options":{
+                  "raw":{
+                     "language":"json"
+                  }
+               }
+            },
+            "url":{
+               "raw":"http://localhost:5000/api/mongo/echo/60868a995859414a38943583",
+               "protocol":"http",
+               "host":[
+                  "localhost"
+               ],
+               "port":"5000",
+               "path":[
+                  "api",
+                  "mongo",
+                  "echo",
+                  "60868a995859414a38943583"
+               ]
+            }
+         },
+         "response":[
+            
+         ]
+      },
+      {
+         "name":"Update (需要帶入get的_ID當成參數) Copy",
+         "request":{
+            "method":"DELETE",
+            "header":[
+               
+            ],
+            "body":{
+               "mode":"raw",
+               "raw":"",
+               "options":{
+                  "raw":{
+                     "language":"json"
+                  }
+               }
+            },
+            "url":{
+               "raw":"http://localhost:5000/api/mongo/echo/60868a995859414a38943583",
+               "protocol":"http",
+               "host":[
+                  "localhost"
+               ],
+               "port":"5000",
+               "path":[
+                  "api",
+                  "mongo",
+                  "echo",
+                  "60868a995859414a38943583"
+               ]
+            }
+         },
+         "response":[
+            
+         ]
+      }
+   ]
+}
